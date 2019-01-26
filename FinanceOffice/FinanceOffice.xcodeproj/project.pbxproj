@@ -1,0 +1,1052 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03E0F54DD18A6AFEDC9E25FC /* Pods_FinanceOffice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E5B4503E425A0ED4561FA7 /* Pods_FinanceOffice.framework */; };
+		5F37D5E64654A0873004F882 /* Pods_FinanceOfficeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067794C7B6403C1FB7BD33B3 /* Pods_FinanceOfficeTests.framework */; };
+		E105FF6B21FD0AEB00FCA58D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E105FF6921FD0AEB00FCA58D /* Theme.swift */; };
+		E105FF6C21FD0AEB00FCA58D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E105FF6A21FD0AEB00FCA58D /* ColorExtension.swift */; };
+		E120407C21FC822700A9D2FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E120407B21FC822700A9D2FF /* AppDelegate.swift */; };
+		E120408121FC822700A9D2FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E120407F21FC822700A9D2FF /* Main.storyboard */; };
+		E120408421FC822700A9D2FF /* FinanceOffice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E120408221FC822700A9D2FF /* FinanceOffice.xcdatamodeld */; };
+		E120408621FC822900A9D2FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E120408521FC822900A9D2FF /* Assets.xcassets */; };
+		E120408921FC822900A9D2FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E120408721FC822900A9D2FF /* LaunchScreen.storyboard */; };
+		E120409421FC822900A9D2FF /* FinanceOfficeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E120409321FC822900A9D2FF /* FinanceOfficeTests.swift */; };
+		E12040AA21FC84B300A9D2FF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040A421FC84B300A9D2FF /* APIService.swift */; };
+		E12040AB21FC84B300A9D2FF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040A621FC84B300A9D2FF /* CoreDataManager.swift */; };
+		E12040AC21FC84B300A9D2FF /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040A821FC84B300A9D2FF /* ImageExtension.swift */; };
+		E12040AD21FC84B300A9D2FF /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040A921FC84B300A9D2FF /* StringExtension.swift */; };
+		E12040AF21FC84CB00A9D2FF /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040AE21FC84CB00A9D2FF /* LoaderView.swift */; };
+		E12040B021FC85F900A9D2FF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040A421FC84B300A9D2FF /* APIService.swift */; };
+		E12040C421FC876E00A9D2FF /* ListOfOfficesLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040B521FC876E00A9D2FF /* ListOfOfficesLocalDataManager.swift */; };
+		E12040C521FC876E00A9D2FF /* ListOfOfficesAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040B721FC876E00A9D2FF /* ListOfOfficesAPIDataManager.swift */; };
+		E12040C621FC876E00A9D2FF /* ListOfOfficesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040B921FC876E00A9D2FF /* ListOfOfficesItem.swift */; };
+		E12040C721FC876E00A9D2FF /* ListOfOfficesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040BA21FC876E00A9D2FF /* ListOfOfficesInteractor.swift */; };
+		E12040C821FC876E00A9D2FF /* ListOfOfficesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040BC21FC876E00A9D2FF /* ListOfOfficesProtocols.swift */; };
+		E12040C921FC876E00A9D2FF /* ListOfOfficesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040BF21FC876E00A9D2FF /* ListOfOfficesPresenter.swift */; };
+		E12040CA21FC876E00A9D2FF /* ListOfOfficesWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040C121FC876E00A9D2FF /* ListOfOfficesWireFrame.swift */; };
+		E12040CB21FC876E00A9D2FF /* ListOfOfficesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040C321FC876E00A9D2FF /* ListOfOfficesView.swift */; };
+		E12040CD21FC879600A9D2FF /* OfficeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040CC21FC879600A9D2FF /* OfficeCell.swift */; };
+		E12040E121FC885A00A9D2FF /* OfficeDetailLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040D221FC885A00A9D2FF /* OfficeDetailLocalDataManager.swift */; };
+		E12040E221FC885A00A9D2FF /* OfficeDetailAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040D421FC885A00A9D2FF /* OfficeDetailAPIDataManager.swift */; };
+		E12040E321FC885A00A9D2FF /* OfficeDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040D621FC885A00A9D2FF /* OfficeDetailInteractor.swift */; };
+		E12040E421FC885A00A9D2FF /* OfficeDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040D721FC885A00A9D2FF /* OfficeDetailItem.swift */; };
+		E12040E521FC885A00A9D2FF /* OfficeDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040D921FC885A00A9D2FF /* OfficeDetailProtocols.swift */; };
+		E12040E621FC885A00A9D2FF /* OfficeDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040DC21FC885A00A9D2FF /* OfficeDetailPresenter.swift */; };
+		E12040E721FC885A00A9D2FF /* OfficeDetailWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040DE21FC885A00A9D2FF /* OfficeDetailWireFrame.swift */; };
+		E12040E821FC885A00A9D2FF /* OfficeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040E021FC885A00A9D2FF /* OfficeDetailView.swift */; };
+		E12040FC21FC8C8700A9D2FF /* OfficeOnMapLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040ED21FC8C8700A9D2FF /* OfficeOnMapLocalDataManager.swift */; };
+		E12040FD21FC8C8700A9D2FF /* OfficeOnMapAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040EF21FC8C8700A9D2FF /* OfficeOnMapAPIDataManager.swift */; };
+		E12040FE21FC8C8700A9D2FF /* OfficeOnMapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040F121FC8C8700A9D2FF /* OfficeOnMapItem.swift */; };
+		E12040FF21FC8C8700A9D2FF /* OfficeOnMapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040F221FC8C8700A9D2FF /* OfficeOnMapInteractor.swift */; };
+		E120410021FC8C8700A9D2FF /* OfficeOnMapProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040F421FC8C8700A9D2FF /* OfficeOnMapProtocols.swift */; };
+		E120410121FC8C8700A9D2FF /* OfficeOnMapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040F721FC8C8700A9D2FF /* OfficeOnMapPresenter.swift */; };
+		E120410221FC8C8700A9D2FF /* OfficeOnMapWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040F921FC8C8700A9D2FF /* OfficeOnMapWireFrame.swift */; };
+		E120410321FC8C8700A9D2FF /* OfficeOnMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040FB21FC8C8700A9D2FF /* OfficeOnMapView.swift */; };
+		E120410421FC992400A9D2FF /* ListOfOfficesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12040B921FC876E00A9D2FF /* ListOfOfficesItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E120409021FC822900A9D2FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E120407021FC822700A9D2FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E120407721FC822700A9D2FF;
+			remoteInfo = FinanceOffice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		067794C7B6403C1FB7BD33B3 /* Pods_FinanceOfficeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceOfficeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FA866379C878BBECB3B3288 /* Pods-FinanceOfficeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceOfficeTests.release.xcconfig"; path = "Target Support Files/Pods-FinanceOfficeTests/Pods-FinanceOfficeTests.release.xcconfig"; sourceTree = "<group>"; };
+		20E5B4503E425A0ED4561FA7 /* Pods_FinanceOffice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceOffice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		862F708BD48375A2B7162E65 /* Pods-FinanceOffice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceOffice.debug.xcconfig"; path = "Target Support Files/Pods-FinanceOffice/Pods-FinanceOffice.debug.xcconfig"; sourceTree = "<group>"; };
+		89B68AC1C2660BD8A91344AC /* Pods-FinanceOfficeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceOfficeTests.debug.xcconfig"; path = "Target Support Files/Pods-FinanceOfficeTests/Pods-FinanceOfficeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E105FF6921FD0AEB00FCA58D /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		E105FF6A21FD0AEB00FCA58D /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		E120407821FC822700A9D2FF /* FinanceOffice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceOffice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E120407B21FC822700A9D2FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E120408021FC822700A9D2FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E120408321FC822700A9D2FF /* FinanceOffice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinanceOffice.xcdatamodel; sourceTree = "<group>"; };
+		E120408521FC822900A9D2FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E120408821FC822900A9D2FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E120408A21FC822900A9D2FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E120408F21FC822900A9D2FF /* FinanceOfficeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinanceOfficeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E120409321FC822900A9D2FF /* FinanceOfficeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceOfficeTests.swift; sourceTree = "<group>"; };
+		E120409521FC822900A9D2FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E12040A421FC84B300A9D2FF /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		E12040A621FC84B300A9D2FF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		E12040A821FC84B300A9D2FF /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		E12040A921FC84B300A9D2FF /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E12040AE21FC84CB00A9D2FF /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		E12040B521FC876E00A9D2FF /* ListOfOfficesLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfOfficesLocalDataManager.swift; sourceTree = "<group>"; };
+		E12040B721FC876E00A9D2FF /* ListOfOfficesAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfOfficesAPIDataManager.swift; sourceTree = "<group>"; };
+		E12040B921FC876E00A9D2FF /* ListOfOfficesItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfOfficesItem.swift; sourceTree = "<group>"; };
+		E12040BA21FC876E00A9D2FF /* ListOfOfficesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfOfficesInteractor.swift; sourceTree = "<group>"; };
+		E12040BC21FC876E00A9D2FF /* ListOfOfficesProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfOfficesProtocols.swift; sourceTree = "<group>"; };
+		E12040BF21FC876E00A9D2FF /* ListOfOfficesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfOfficesPresenter.swift; sourceTree = "<group>"; };
+		E12040C121FC876E00A9D2FF /* ListOfOfficesWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfOfficesWireFrame.swift; sourceTree = "<group>"; };
+		E12040C321FC876E00A9D2FF /* ListOfOfficesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfOfficesView.swift; sourceTree = "<group>"; };
+		E12040CC21FC879600A9D2FF /* OfficeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeCell.swift; sourceTree = "<group>"; };
+		E12040D221FC885A00A9D2FF /* OfficeDetailLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeDetailLocalDataManager.swift; sourceTree = "<group>"; };
+		E12040D421FC885A00A9D2FF /* OfficeDetailAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeDetailAPIDataManager.swift; sourceTree = "<group>"; };
+		E12040D621FC885A00A9D2FF /* OfficeDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeDetailInteractor.swift; sourceTree = "<group>"; };
+		E12040D721FC885A00A9D2FF /* OfficeDetailItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeDetailItem.swift; sourceTree = "<group>"; };
+		E12040D921FC885A00A9D2FF /* OfficeDetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeDetailProtocols.swift; sourceTree = "<group>"; };
+		E12040DC21FC885A00A9D2FF /* OfficeDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeDetailPresenter.swift; sourceTree = "<group>"; };
+		E12040DE21FC885A00A9D2FF /* OfficeDetailWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeDetailWireFrame.swift; sourceTree = "<group>"; };
+		E12040E021FC885A00A9D2FF /* OfficeDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeDetailView.swift; sourceTree = "<group>"; };
+		E12040ED21FC8C8700A9D2FF /* OfficeOnMapLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeOnMapLocalDataManager.swift; sourceTree = "<group>"; };
+		E12040EF21FC8C8700A9D2FF /* OfficeOnMapAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeOnMapAPIDataManager.swift; sourceTree = "<group>"; };
+		E12040F121FC8C8700A9D2FF /* OfficeOnMapItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeOnMapItem.swift; sourceTree = "<group>"; };
+		E12040F221FC8C8700A9D2FF /* OfficeOnMapInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeOnMapInteractor.swift; sourceTree = "<group>"; };
+		E12040F421FC8C8700A9D2FF /* OfficeOnMapProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeOnMapProtocols.swift; sourceTree = "<group>"; };
+		E12040F721FC8C8700A9D2FF /* OfficeOnMapPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeOnMapPresenter.swift; sourceTree = "<group>"; };
+		E12040F921FC8C8700A9D2FF /* OfficeOnMapWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeOnMapWireFrame.swift; sourceTree = "<group>"; };
+		E12040FB21FC8C8700A9D2FF /* OfficeOnMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeOnMapView.swift; sourceTree = "<group>"; };
+		FB5CB74B04674532F4267A8B /* Pods-FinanceOffice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceOffice.release.xcconfig"; path = "Target Support Files/Pods-FinanceOffice/Pods-FinanceOffice.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E120407521FC822700A9D2FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03E0F54DD18A6AFEDC9E25FC /* Pods_FinanceOffice.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E120408C21FC822900A9D2FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F37D5E64654A0873004F882 /* Pods_FinanceOfficeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A894B171FF93C28C040CF7B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				862F708BD48375A2B7162E65 /* Pods-FinanceOffice.debug.xcconfig */,
+				FB5CB74B04674532F4267A8B /* Pods-FinanceOffice.release.xcconfig */,
+				89B68AC1C2660BD8A91344AC /* Pods-FinanceOfficeTests.debug.xcconfig */,
+				1FA866379C878BBECB3B3288 /* Pods-FinanceOfficeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E120406F21FC822700A9D2FF = {
+			isa = PBXGroup;
+			children = (
+				E120407A21FC822700A9D2FF /* FinanceOffice */,
+				E120409221FC822900A9D2FF /* FinanceOfficeTests */,
+				E120407921FC822700A9D2FF /* Products */,
+				A894B171FF93C28C040CF7B9 /* Pods */,
+				FEAD2FE93F1DA75C6327F812 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E120407921FC822700A9D2FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E120407821FC822700A9D2FF /* FinanceOffice.app */,
+				E120408F21FC822900A9D2FF /* FinanceOfficeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E120407A21FC822700A9D2FF /* FinanceOffice */ = {
+			isa = PBXGroup;
+			children = (
+				E12040E921FC8C8700A9D2FF /* OfficeOnMap */,
+				E12040CE21FC885A00A9D2FF /* OfficeDetail */,
+				E12040B121FC876E00A9D2FF /* ListOfOffices */,
+				E12040A221FC84B300A9D2FF /* common */,
+				E120407B21FC822700A9D2FF /* AppDelegate.swift */,
+				E120407F21FC822700A9D2FF /* Main.storyboard */,
+				E120408521FC822900A9D2FF /* Assets.xcassets */,
+				E120408721FC822900A9D2FF /* LaunchScreen.storyboard */,
+				E120408A21FC822900A9D2FF /* Info.plist */,
+				E120408221FC822700A9D2FF /* FinanceOffice.xcdatamodeld */,
+			);
+			path = FinanceOffice;
+			sourceTree = "<group>";
+		};
+		E120409221FC822900A9D2FF /* FinanceOfficeTests */ = {
+			isa = PBXGroup;
+			children = (
+				E120409321FC822900A9D2FF /* FinanceOfficeTests.swift */,
+				E120409521FC822900A9D2FF /* Info.plist */,
+			);
+			path = FinanceOfficeTests;
+			sourceTree = "<group>";
+		};
+		E12040A221FC84B300A9D2FF /* common */ = {
+			isa = PBXGroup;
+			children = (
+				E12040A321FC84B300A9D2FF /* Network */,
+				E12040A521FC84B300A9D2FF /* CoreData */,
+				E12040A721FC84B300A9D2FF /* Utilities */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		E12040A321FC84B300A9D2FF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E12040A421FC84B300A9D2FF /* APIService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E12040A521FC84B300A9D2FF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E12040A621FC84B300A9D2FF /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		E12040A721FC84B300A9D2FF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E105FF6A21FD0AEB00FCA58D /* ColorExtension.swift */,
+				E105FF6921FD0AEB00FCA58D /* Theme.swift */,
+				E12040A821FC84B300A9D2FF /* ImageExtension.swift */,
+				E12040A921FC84B300A9D2FF /* StringExtension.swift */,
+				E12040AE21FC84CB00A9D2FF /* LoaderView.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E12040B121FC876E00A9D2FF /* ListOfOffices */ = {
+			isa = PBXGroup;
+			children = (
+				E12040B221FC876E00A9D2FF /* Application Logic */,
+				E12040BB21FC876E00A9D2FF /* Protocols */,
+				E12040BD21FC876E00A9D2FF /* User Interface */,
+			);
+			path = ListOfOffices;
+			sourceTree = "<group>";
+		};
+		E12040B221FC876E00A9D2FF /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				E12040B321FC876E00A9D2FF /* DataManager */,
+				E12040B821FC876E00A9D2FF /* Interactor */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		E12040B321FC876E00A9D2FF /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				E12040B421FC876E00A9D2FF /* Local */,
+				E12040B621FC876E00A9D2FF /* API */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		E12040B421FC876E00A9D2FF /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				E12040B521FC876E00A9D2FF /* ListOfOfficesLocalDataManager.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		E12040B621FC876E00A9D2FF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E12040B721FC876E00A9D2FF /* ListOfOfficesAPIDataManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E12040B821FC876E00A9D2FF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E12040B921FC876E00A9D2FF /* ListOfOfficesItem.swift */,
+				E12040BA21FC876E00A9D2FF /* ListOfOfficesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E12040BB21FC876E00A9D2FF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E12040BC21FC876E00A9D2FF /* ListOfOfficesProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E12040BD21FC876E00A9D2FF /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				E12040BE21FC876E00A9D2FF /* Presenter */,
+				E12040C021FC876E00A9D2FF /* WireFrame */,
+				E12040C221FC876E00A9D2FF /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		E12040BE21FC876E00A9D2FF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E12040BF21FC876E00A9D2FF /* ListOfOfficesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E12040C021FC876E00A9D2FF /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				E12040C121FC876E00A9D2FF /* ListOfOfficesWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		E12040C221FC876E00A9D2FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E12040C321FC876E00A9D2FF /* ListOfOfficesView.swift */,
+				E12040CC21FC879600A9D2FF /* OfficeCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E12040CE21FC885A00A9D2FF /* OfficeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E12040CF21FC885A00A9D2FF /* Application Logic */,
+				E12040D821FC885A00A9D2FF /* Protocols */,
+				E12040DA21FC885A00A9D2FF /* User Interface */,
+			);
+			path = OfficeDetail;
+			sourceTree = "<group>";
+		};
+		E12040CF21FC885A00A9D2FF /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				E12040D021FC885A00A9D2FF /* DataManager */,
+				E12040D521FC885A00A9D2FF /* Interactor */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		E12040D021FC885A00A9D2FF /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				E12040D121FC885A00A9D2FF /* Local */,
+				E12040D321FC885A00A9D2FF /* API */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		E12040D121FC885A00A9D2FF /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				E12040D221FC885A00A9D2FF /* OfficeDetailLocalDataManager.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		E12040D321FC885A00A9D2FF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E12040D421FC885A00A9D2FF /* OfficeDetailAPIDataManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E12040D521FC885A00A9D2FF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E12040D621FC885A00A9D2FF /* OfficeDetailInteractor.swift */,
+				E12040D721FC885A00A9D2FF /* OfficeDetailItem.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E12040D821FC885A00A9D2FF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E12040D921FC885A00A9D2FF /* OfficeDetailProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E12040DA21FC885A00A9D2FF /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				E12040DB21FC885A00A9D2FF /* Presenter */,
+				E12040DD21FC885A00A9D2FF /* WireFrame */,
+				E12040DF21FC885A00A9D2FF /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		E12040DB21FC885A00A9D2FF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E12040DC21FC885A00A9D2FF /* OfficeDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E12040DD21FC885A00A9D2FF /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				E12040DE21FC885A00A9D2FF /* OfficeDetailWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		E12040DF21FC885A00A9D2FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E12040E021FC885A00A9D2FF /* OfficeDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E12040E921FC8C8700A9D2FF /* OfficeOnMap */ = {
+			isa = PBXGroup;
+			children = (
+				E12040EA21FC8C8700A9D2FF /* Application Logic */,
+				E12040F321FC8C8700A9D2FF /* Protocols */,
+				E12040F521FC8C8700A9D2FF /* User Interface */,
+			);
+			path = OfficeOnMap;
+			sourceTree = "<group>";
+		};
+		E12040EA21FC8C8700A9D2FF /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				E12040EB21FC8C8700A9D2FF /* DataManager */,
+				E12040F021FC8C8700A9D2FF /* Interactor */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		E12040EB21FC8C8700A9D2FF /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				E12040EC21FC8C8700A9D2FF /* Local */,
+				E12040EE21FC8C8700A9D2FF /* API */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		E12040EC21FC8C8700A9D2FF /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				E12040ED21FC8C8700A9D2FF /* OfficeOnMapLocalDataManager.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		E12040EE21FC8C8700A9D2FF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E12040EF21FC8C8700A9D2FF /* OfficeOnMapAPIDataManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E12040F021FC8C8700A9D2FF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E12040F121FC8C8700A9D2FF /* OfficeOnMapItem.swift */,
+				E12040F221FC8C8700A9D2FF /* OfficeOnMapInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E12040F321FC8C8700A9D2FF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E12040F421FC8C8700A9D2FF /* OfficeOnMapProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E12040F521FC8C8700A9D2FF /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				E12040F621FC8C8700A9D2FF /* Presenter */,
+				E12040F821FC8C8700A9D2FF /* WireFrame */,
+				E12040FA21FC8C8700A9D2FF /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		E12040F621FC8C8700A9D2FF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E12040F721FC8C8700A9D2FF /* OfficeOnMapPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E12040F821FC8C8700A9D2FF /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				E12040F921FC8C8700A9D2FF /* OfficeOnMapWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		E12040FA21FC8C8700A9D2FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E12040FB21FC8C8700A9D2FF /* OfficeOnMapView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEAD2FE93F1DA75C6327F812 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20E5B4503E425A0ED4561FA7 /* Pods_FinanceOffice.framework */,
+				067794C7B6403C1FB7BD33B3 /* Pods_FinanceOfficeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E120407721FC822700A9D2FF /* FinanceOffice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E120409821FC822900A9D2FF /* Build configuration list for PBXNativeTarget "FinanceOffice" */;
+			buildPhases = (
+				8EE3DA5571C3CF44951B2FA0 /* [CP] Check Pods Manifest.lock */,
+				E120407421FC822700A9D2FF /* Sources */,
+				E120407521FC822700A9D2FF /* Frameworks */,
+				E120407621FC822700A9D2FF /* Resources */,
+				9BE8E3D9728B6F8EE705E324 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinanceOffice;
+			productName = FinanceOffice;
+			productReference = E120407821FC822700A9D2FF /* FinanceOffice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E120408E21FC822900A9D2FF /* FinanceOfficeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E120409B21FC822900A9D2FF /* Build configuration list for PBXNativeTarget "FinanceOfficeTests" */;
+			buildPhases = (
+				F45611956D79D8EA985196D6 /* [CP] Check Pods Manifest.lock */,
+				E120408B21FC822900A9D2FF /* Sources */,
+				E120408C21FC822900A9D2FF /* Frameworks */,
+				E120408D21FC822900A9D2FF /* Resources */,
+				0E8A68ED6A7CB97C4FC0D7DE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E120409121FC822900A9D2FF /* PBXTargetDependency */,
+			);
+			name = FinanceOfficeTests;
+			productName = FinanceOfficeTests;
+			productReference = E120408F21FC822900A9D2FF /* FinanceOfficeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E120407021FC822700A9D2FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Developer;
+				TargetAttributes = {
+					E120407721FC822700A9D2FF = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					E120408E21FC822900A9D2FF = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = E120407721FC822700A9D2FF;
+					};
+				};
+			};
+			buildConfigurationList = E120407321FC822700A9D2FF /* Build configuration list for PBXProject "FinanceOffice" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E120406F21FC822700A9D2FF;
+			productRefGroup = E120407921FC822700A9D2FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E120407721FC822700A9D2FF /* FinanceOffice */,
+				E120408E21FC822900A9D2FF /* FinanceOfficeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E120407621FC822700A9D2FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E120408921FC822900A9D2FF /* LaunchScreen.storyboard in Resources */,
+				E120408621FC822900A9D2FF /* Assets.xcassets in Resources */,
+				E120408121FC822700A9D2FF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E120408D21FC822900A9D2FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E8A68ED6A7CB97C4FC0D7DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinanceOfficeTests/Pods-FinanceOfficeTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinanceOfficeTests/Pods-FinanceOfficeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EE3DA5571C3CF44951B2FA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FinanceOffice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BE8E3D9728B6F8EE705E324 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinanceOffice/Pods-FinanceOffice-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinanceOffice/Pods-FinanceOffice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F45611956D79D8EA985196D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FinanceOfficeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E120407421FC822700A9D2FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E12040C821FC876E00A9D2FF /* ListOfOfficesProtocols.swift in Sources */,
+				E120410221FC8C8700A9D2FF /* OfficeOnMapWireFrame.swift in Sources */,
+				E12040CB21FC876E00A9D2FF /* ListOfOfficesView.swift in Sources */,
+				E120410121FC8C8700A9D2FF /* OfficeOnMapPresenter.swift in Sources */,
+				E12040C521FC876E00A9D2FF /* ListOfOfficesAPIDataManager.swift in Sources */,
+				E12040E821FC885A00A9D2FF /* OfficeDetailView.swift in Sources */,
+				E120408421FC822700A9D2FF /* FinanceOffice.xcdatamodeld in Sources */,
+				E12040E521FC885A00A9D2FF /* OfficeDetailProtocols.swift in Sources */,
+				E12040FD21FC8C8700A9D2FF /* OfficeOnMapAPIDataManager.swift in Sources */,
+				E12040AA21FC84B300A9D2FF /* APIService.swift in Sources */,
+				E12040AD21FC84B300A9D2FF /* StringExtension.swift in Sources */,
+				E12040CA21FC876E00A9D2FF /* ListOfOfficesWireFrame.swift in Sources */,
+				E120410021FC8C8700A9D2FF /* OfficeOnMapProtocols.swift in Sources */,
+				E12040FC21FC8C8700A9D2FF /* OfficeOnMapLocalDataManager.swift in Sources */,
+				E12040CD21FC879600A9D2FF /* OfficeCell.swift in Sources */,
+				E105FF6B21FD0AEB00FCA58D /* Theme.swift in Sources */,
+				E12040AF21FC84CB00A9D2FF /* LoaderView.swift in Sources */,
+				E12040AB21FC84B300A9D2FF /* CoreDataManager.swift in Sources */,
+				E12040E221FC885A00A9D2FF /* OfficeDetailAPIDataManager.swift in Sources */,
+				E120410321FC8C8700A9D2FF /* OfficeOnMapView.swift in Sources */,
+				E12040E721FC885A00A9D2FF /* OfficeDetailWireFrame.swift in Sources */,
+				E12040FF21FC8C8700A9D2FF /* OfficeOnMapInteractor.swift in Sources */,
+				E12040FE21FC8C8700A9D2FF /* OfficeOnMapItem.swift in Sources */,
+				E105FF6C21FD0AEB00FCA58D /* ColorExtension.swift in Sources */,
+				E12040E121FC885A00A9D2FF /* OfficeDetailLocalDataManager.swift in Sources */,
+				E12040C721FC876E00A9D2FF /* ListOfOfficesInteractor.swift in Sources */,
+				E12040AC21FC84B300A9D2FF /* ImageExtension.swift in Sources */,
+				E12040C421FC876E00A9D2FF /* ListOfOfficesLocalDataManager.swift in Sources */,
+				E12040E321FC885A00A9D2FF /* OfficeDetailInteractor.swift in Sources */,
+				E12040E621FC885A00A9D2FF /* OfficeDetailPresenter.swift in Sources */,
+				E12040C921FC876E00A9D2FF /* ListOfOfficesPresenter.swift in Sources */,
+				E120407C21FC822700A9D2FF /* AppDelegate.swift in Sources */,
+				E12040C621FC876E00A9D2FF /* ListOfOfficesItem.swift in Sources */,
+				E12040E421FC885A00A9D2FF /* OfficeDetailItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E120408B21FC822900A9D2FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E12040B021FC85F900A9D2FF /* APIService.swift in Sources */,
+				E120409421FC822900A9D2FF /* FinanceOfficeTests.swift in Sources */,
+				E120410421FC992400A9D2FF /* ListOfOfficesItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E120409121FC822900A9D2FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E120407721FC822700A9D2FF /* FinanceOffice */;
+			targetProxy = E120409021FC822900A9D2FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E120407F21FC822700A9D2FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E120408021FC822700A9D2FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E120408721FC822900A9D2FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E120408821FC822900A9D2FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E120409621FC822900A9D2FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E120409721FC822900A9D2FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E120409921FC822900A9D2FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 862F708BD48375A2B7162E65 /* Pods-FinanceOffice.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T755W67T46;
+				INFOPLIST_FILE = FinanceOffice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SumeetMourya.FinanceOffice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E120409A21FC822900A9D2FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB5CB74B04674532F4267A8B /* Pods-FinanceOffice.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T755W67T46;
+				INFOPLIST_FILE = FinanceOffice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SumeetMourya.FinanceOffice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E120409C21FC822900A9D2FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89B68AC1C2660BD8A91344AC /* Pods-FinanceOfficeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T755W67T46;
+				INFOPLIST_FILE = FinanceOfficeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SumeetMourya.FinanceOfficeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceOffice.app/FinanceOffice";
+			};
+			name = Debug;
+		};
+		E120409D21FC822900A9D2FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FA866379C878BBECB3B3288 /* Pods-FinanceOfficeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T755W67T46;
+				INFOPLIST_FILE = FinanceOfficeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SumeetMourya.FinanceOfficeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceOffice.app/FinanceOffice";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E120407321FC822700A9D2FF /* Build configuration list for PBXProject "FinanceOffice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E120409621FC822900A9D2FF /* Debug */,
+				E120409721FC822900A9D2FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E120409821FC822900A9D2FF /* Build configuration list for PBXNativeTarget "FinanceOffice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E120409921FC822900A9D2FF /* Debug */,
+				E120409A21FC822900A9D2FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E120409B21FC822900A9D2FF /* Build configuration list for PBXNativeTarget "FinanceOfficeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E120409C21FC822900A9D2FF /* Debug */,
+				E120409D21FC822900A9D2FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E120408221FC822700A9D2FF /* FinanceOffice.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E120408321FC822700A9D2FF /* FinanceOffice.xcdatamodel */,
+			);
+			currentVersion = E120408321FC822700A9D2FF /* FinanceOffice.xcdatamodel */;
+			path = FinanceOffice.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E120407021FC822700A9D2FF /* Project object */;
+}
