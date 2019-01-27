@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-struct OfficeOnMapItem: Decodable {
+struct OfficeOnMapItemDM: Decodable {
     
     let nameOfOffice: String?
     let zipCodeOfOffice: Int?

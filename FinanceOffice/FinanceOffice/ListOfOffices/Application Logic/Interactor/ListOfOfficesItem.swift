@@ -7,12 +7,72 @@
 //
 
 import Foundation
-
-import Foundation
 import CoreData
 
+struct ListOfOfficesItemDM: Decodable {
+    
+    let idOfOffice: String?
+    let nameOfOffice: String?
+    let zipCodeOfOffice: Int?
+    let cityOfOffice: String?
+    let addressOfOffice: String?
+    
+    enum CodingKeys: String, CodingKey {
+        
+        case DisId
+        case DisNameLang
+        case DisPlz
+        case DisOrt
+        case DisStrasse
+        
+        func getKeyOfData() -> String {
+            
+            switch self {
+            case .DisId:
+                return "idOfOffice"
+            case .DisNameLang:
+                return "nameOfOffice"
+            case .DisPlz:
+                return "zipCodeOfOffice"
+            case .DisOrt:
+                return "cityOfOffice"
+            case .DisStrasse:
+                return "addressOfOffice"
+            }
+        }
+        
+    }
+    
+    init(from decoder: Decoder) throws {
+        
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        self.idOfOffice = try? container.decode(String.self, forKey: .DisId)
+        self.nameOfOffice = try? container.decode(String.self, forKey: .DisNameLang)
+        if let zipCodeValue = try? container.decode(String.self, forKey: .DisPlz) {
+            self.zipCodeOfOffice = Int(zipCodeValue)
+        } else {
+            self.zipCodeOfOffice = nil
+        }
+        self.cityOfOffice = try? container.decode(String.self, forKey: .DisOrt)
+        self.addressOfOffice = try? container.decode(String.self, forKey: .DisStrasse)
+    }
+    
+    init(from mngObj: NSManagedObject) throws {
+        
+        self.idOfOffice = mngObj.value(forKey: CodingKeys.DisId.getKeyOfData()) as? String
+        self.nameOfOffice = mngObj.value(forKey: CodingKeys.DisNameLang.getKeyOfData()) as? String
+        if let zipCodeValue = mngObj.value(forKey: CodingKeys.DisPlz.getKeyOfData()) as? Int {
+            self.zipCodeOfOffice = zipCodeValue
+        } else {
+            self.zipCodeOfOffice = nil
+        }
+        self.cityOfOffice = mngObj.value(forKey: CodingKeys.DisOrt.getKeyOfData()) as? String
+        self.addressOfOffice = mngObj.value(forKey: CodingKeys.DisStrasse.getKeyOfData()) as? String
+    }
+}
 
-struct ListOfOfficesItem: Decodable {
+struct DetailOfOfficeDM: Decodable {
     
     let idOfOffice: String?
     let typeOfOffice: String?
@@ -187,3 +247,5 @@ struct ListOfOfficesItem: Decodable {
         }
     }
 }
+
+

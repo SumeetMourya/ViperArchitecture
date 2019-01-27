@@ -13,7 +13,7 @@ protocol OfficeOnMapViewProtocol: class {
     var presenter: OfficeOnMapPresenterProtocol? { get set }
     
     //here we are adding  methods for communication PRESENTER -> VIEW
-    func updateOfficeLocationDataOnView(data: OfficeOnMapItem)
+    func updateOfficeLocationDataOnView(data: OfficeOnMapItemDM)
     func showEmptyDataState()
     
 }
@@ -40,7 +40,7 @@ protocol OfficeOnMapInteractorOutputProtocol: class {
     
     //here we are adding methods for communication INTERACTOR -> PRESENTER
     
-    func updateDataOnView(data: OfficeOnMapItem)
+    func updateDataOnView(data: OfficeOnMapItemDM)
     func showEmptyDataState()
     
 }
@@ -71,6 +71,6 @@ protocol OfficeOnMapAPIDataManagerInputProtocol: class
 protocol OfficeOnMapLocalDataManagerInputProtocol: class
 {
     //here we are adding methods for communication INTERACTOR -> LOCALDATAMANAGER
-    func getOfficeLocationDataFromLocalForGiven(idOfOffice: String) -> OfficeOnMapItem?
+    func getOfficeLocationDataFromLocalForGiven(idOfOffice: String) -> OfficeOnMapItemDM?
     
 }

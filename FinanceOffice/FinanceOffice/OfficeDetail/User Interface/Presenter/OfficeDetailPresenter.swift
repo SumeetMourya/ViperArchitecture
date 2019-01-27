@@ -33,7 +33,7 @@ class OfficeDetailPresenter: OfficeDetailPresenterProtocol, OfficeDetailInteract
     
     // MARK: OfficeDetailInteractorOutputProtocol Methods
     
-    func updateDataOnView(data: ListOfOfficesItem) {
+    func updateDataOnView(data: OfficeDetailItemDM) {
         self.view?.updateDataOnView(data: data)
     }
     

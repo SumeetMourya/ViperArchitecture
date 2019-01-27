@@ -25,16 +25,21 @@ class OfficeOnMapViewController: UIViewController, OfficeOnMapViewProtocol {
     
     // MARK: Private Methods
     func showAlertView(msg: String, title: String) {
-        let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        
+        DispatchQueue.main.async() {
+            let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         
         alertController.addAction(UIAlertAction(title: "ok", style: .default, handler: { (action:UIAlertAction) in
         }))
-        present(alertController, animated: true, completion: nil)
+        
+//        present(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     
     // MARK: OfficeOnMapViewProtocol Methods
-    func updateOfficeLocationDataOnView(data: OfficeOnMapItem) {
+    func updateOfficeLocationDataOnView(data: OfficeOnMapItemDM) {
         
         if let latitudeValue = data.latitudeOfOffice, let longitudeValue = data.longitudeOfOffice {
             let annotation = MKPointAnnotation()

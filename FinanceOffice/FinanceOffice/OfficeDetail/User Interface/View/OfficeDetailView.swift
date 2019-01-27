@@ -72,7 +72,7 @@ class OfficeDetailViewController: UIViewController, OfficeDetailViewProtocol {
     
     // MARK: OfficeDetailViewProtocol Methods
     
-    func updateDataOnView(data: ListOfOfficesItem) {
+    func updateDataOnView(data: OfficeDetailItemDM) {
         showEmptyView(show: false)
         
         nameOfOffice.text = data.nameOfOffice

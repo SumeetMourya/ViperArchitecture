@@ -24,9 +24,9 @@ class ListOfOfficesInteractor: ListOfOfficesInteractorInputProtocol {
         
         //we will check if the local data is there then show the data without loading screen
         //otherwise we will show the loading screen while laading data
-        var offices:[ListOfOfficesItem] = [ListOfOfficesItem]()
+        var offices:[ListOfOfficesItemDM] = [ListOfOfficesItemDM]()
         
-        if let officesDataValue:[ListOfOfficesItem] = localDatamanager?.getOfficeDataFromLocal(), officesDataValue.count > 0 {
+        if let officesDataValue:[ListOfOfficesItemDM] = localDatamanager?.getOfficeDataFromLocal(), officesDataValue.count > 0 {
             offices = officesDataValue
         } else {
             self.showLoaderOnAPIData = true
@@ -51,7 +51,9 @@ class ListOfOfficesInteractor: ListOfOfficesInteractorInputProtocol {
                     }
                     
                     //here we have two options either get data from Local or directly load what we have from API
-                    self?.presenter?.updateListOfOffices(data: officesData)
+                    if let officesDataValue:[ListOfOfficesItemDM] = self?.localDatamanager?.getOfficeDataFromLocal(), officesDataValue.count > 0 {
+                            self?.presenter?.updateListOfOffices(data: officesDataValue)
+                    }
                     
                 }, onFailure: { (error, errorcodeData) in
                     
@@ -77,7 +79,7 @@ class ListOfOfficesInteractor: ListOfOfficesInteractorInputProtocol {
             } else {
                 //here we can do two thing either return empty array or nil....
                 // but returning nil is better than empty array
-                self.presenter?.updateListOfOffices(data: [ListOfOfficesItem]())
+                self.presenter?.updateListOfOffices(data: [ListOfOfficesItemDM]())
             }
         }
         

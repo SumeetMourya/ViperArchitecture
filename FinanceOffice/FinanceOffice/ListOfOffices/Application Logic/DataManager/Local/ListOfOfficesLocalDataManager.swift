@@ -16,7 +16,7 @@ class ListOfOfficesLocalDataManager: ListOfOfficesLocalDataManagerInputProtocol 
     
     static let entityName: String = "Office"
     
-    func saveData(officesData: [ListOfOfficesItem]) {
+    func saveData(officesData: [DetailOfOfficeDM]) {
         
         //Instead of delete all records first then insert all data get from API
         //If we first check which office data is available then only update that.
@@ -25,33 +25,33 @@ class ListOfOfficesLocalDataManager: ListOfOfficesLocalDataManagerInputProtocol 
         CoreDataManager.sharedDatabaseManager.deleteAllRecords(withEntityName: ListOfOfficesLocalDataManager.entityName)
         CoreDataManager.sharedDatabaseManager.save()
         
-        for data: ListOfOfficesItem in officesData {
+        for data: DetailOfOfficeDM in officesData {
             
             if let managedOBJ = CoreDataManager.sharedDatabaseManager.managedObjectContext, let entity = NSEntityDescription.entity(forEntityName: ListOfOfficesLocalDataManager.entityName, in: managedOBJ) {
                 
                 let officeData = NSManagedObject(entity: entity, insertInto: managedOBJ)
                 
-                officeData.setValue(data.typeOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisTyp.getKeyOfData())
-                officeData.setValue(data.idOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisId.getKeyOfData())
-                officeData.setValue(data.kzOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisKz.getKeyOfData())
-                officeData.setValue(data.nameOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisNameLang.getKeyOfData())
-                officeData.setValue(data.bIdOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisBld.getKeyOfData())
-                officeData.setValue(data.zipCodeOfOffice, forKey: ListOfOfficesItem.CodingKeys.DisPlz.getKeyOfData())
-                officeData.setValue(data.cityOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisOrt.getKeyOfData())
-                officeData.setValue(data.addressOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisStrasse.getKeyOfData())
-                officeData.setValue(data.teleNetworkOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DiSTelvw.getKeyOfData())
-                officeData.setValue(data.telephoneNumberOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisTel.getKeyOfData())
-                officeData.setValue(data.faxNumberOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisFax.getKeyOfData())
-                officeData.setValue(data.bLZOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisBlz.getKeyOfData())
-                officeData.setValue(data.bankBezOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisBankbez.getKeyOfData())
-                officeData.setValue(data.giroOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisGiro.getKeyOfData())
-                officeData.setValue(data.bicOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisBic.getKeyOfData())
-                officeData.setValue(data.ibanOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisIban.getKeyOfData())
-                officeData.setValue(data.dvrOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisDVR.getKeyOfData())
-                officeData.setValue(data.openingTimeOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisOeffnung.getKeyOfData())
-                officeData.setValue(data.imageURLOfOffice ?? "", forKey: ListOfOfficesItem.CodingKeys.DisFotoUrl.getKeyOfData())
-                officeData.setValue(data.latitudeOfOffice, forKey: ListOfOfficesItem.CodingKeys.DisLatitude.getKeyOfData())
-                officeData.setValue(data.longitudeOfOffice, forKey: ListOfOfficesItem.CodingKeys.DisLongitude.getKeyOfData())
+                officeData.setValue(data.typeOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisTyp.getKeyOfData())
+                officeData.setValue(data.idOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisId.getKeyOfData())
+                officeData.setValue(data.kzOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisKz.getKeyOfData())
+                officeData.setValue(data.nameOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisNameLang.getKeyOfData())
+                officeData.setValue(data.bIdOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisBld.getKeyOfData())
+                officeData.setValue(data.zipCodeOfOffice, forKey: DetailOfOfficeDM.CodingKeys.DisPlz.getKeyOfData())
+                officeData.setValue(data.cityOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisOrt.getKeyOfData())
+                officeData.setValue(data.addressOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisStrasse.getKeyOfData())
+                officeData.setValue(data.teleNetworkOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DiSTelvw.getKeyOfData())
+                officeData.setValue(data.telephoneNumberOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisTel.getKeyOfData())
+                officeData.setValue(data.faxNumberOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisFax.getKeyOfData())
+                officeData.setValue(data.bLZOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisBlz.getKeyOfData())
+                officeData.setValue(data.bankBezOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisBankbez.getKeyOfData())
+                officeData.setValue(data.giroOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisGiro.getKeyOfData())
+                officeData.setValue(data.bicOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisBic.getKeyOfData())
+                officeData.setValue(data.ibanOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisIban.getKeyOfData())
+                officeData.setValue(data.dvrOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisDVR.getKeyOfData())
+                officeData.setValue(data.openingTimeOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisOeffnung.getKeyOfData())
+                officeData.setValue(data.imageURLOfOffice ?? "", forKey: DetailOfOfficeDM.CodingKeys.DisFotoUrl.getKeyOfData())
+                officeData.setValue(data.latitudeOfOffice, forKey: DetailOfOfficeDM.CodingKeys.DisLatitude.getKeyOfData())
+                officeData.setValue(data.longitudeOfOffice, forKey: DetailOfOfficeDM.CodingKeys.DisLongitude.getKeyOfData())
             }
         }
         
@@ -106,9 +106,9 @@ class ListOfOfficesLocalDataManager: ListOfOfficesLocalDataManagerInputProtocol 
          */
     }
     
-    func getOfficeDataFromLocal() -> [ListOfOfficesItem] {
+    func getOfficeDataFromLocal() -> [ListOfOfficesItemDM] {
         
-        var offices = [ListOfOfficesItem] ()
+        var offices = [ListOfOfficesItemDM] ()
         
         guard let context = CoreDataManager.sharedDatabaseManager.managedObjectContext else {
             return offices
@@ -116,13 +116,13 @@ class ListOfOfficesLocalDataManager: ListOfOfficesLocalDataManagerInputProtocol 
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: ListOfOfficesLocalDataManager.entityName)
         
-        request.sortDescriptors = [NSSortDescriptor(key: "\(ListOfOfficesItem.CodingKeys.DisPlz.getKeyOfData())", ascending: true)]
+        request.sortDescriptors = [NSSortDescriptor(key: "\(ListOfOfficesItemDM.CodingKeys.DisPlz.getKeyOfData())", ascending: true)]
         request.returnsObjectsAsFaults = false
         
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
-                if let officeValue: ListOfOfficesItem = try? ListOfOfficesItem(from: data) {
+                if let officeValue: ListOfOfficesItemDM = try? ListOfOfficesItemDM(from: data) {
                     offices.append(officeValue)
                 }
             }

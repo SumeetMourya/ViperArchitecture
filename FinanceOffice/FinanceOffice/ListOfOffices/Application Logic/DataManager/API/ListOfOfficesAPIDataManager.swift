@@ -11,7 +11,7 @@ import Foundation
 struct API {
     
     //https://service.bmf.gv.at/Finanzamtsliste.json
-    static let baseUrlValue = "https://service.bmf.gv.at"
+    static let baseUrlValue = "https://service.bmf.gv.at/"
     static let apiPath = ""
     static let lastPathComponent = "Finanzamtsliste.json"
     
@@ -20,9 +20,13 @@ struct API {
 
 class ListOfOfficesAPIDataManager: ListOfOfficesAPIDataManagerInputProtocol {
     
-    init() {}
+    let apisServiceStart:APIService?
+
+    init() {
+        apisServiceStart = APIService()
+    }
     
-    func loadDataForURL(url: String, onSuccess success: @escaping (_ data: [ListOfOfficesItem], _ apiStatusCode: ApiStatusType) -> Void, onFailure failure: @escaping (_ error: Error?, _ apiStatusCode: ApiStatusType) -> Void) {
+    func loadDataForURL(url: String, onSuccess success: @escaping (_ data: [DetailOfOfficeDM], _ apiStatusCode: ApiStatusType) -> Void, onFailure failure: @escaping (_ error: Error?, _ apiStatusCode: ApiStatusType) -> Void) {
         
         /*
          let decoded = try? JSONDecoder().decode([ListOfOfficesItem].self, from: self.getData().data(using: .utf8)!)
@@ -35,9 +39,8 @@ class ListOfOfficesAPIDataManager: ListOfOfficesAPIDataManagerInputProtocol {
          }
          */
         
-        let apisServiceStart = APIService()
         
-        apisServiceStart.loadDataWith(urlString: url, onSuccess: { (parseData, succeedCode) in
+        apisServiceStart?.loadDataWith(urlString: url, onSuccess: { (parseData, succeedCode) in
             
             let responseStrInISOLatin = String(data: parseData, encoding: String.Encoding.isoLatin1)
             guard let modifiedDataInUTF8Format = responseStrInISOLatin?.data(using: String.Encoding.utf8) else {
@@ -48,7 +51,7 @@ class ListOfOfficesAPIDataManager: ListOfOfficesAPIDataManagerInputProtocol {
             }
             
             do {
-                let offices = try JSONDecoder().decode([ListOfOfficesItem].self, from: modifiedDataInUTF8Format)
+                let offices = try JSONDecoder().decode([DetailOfOfficeDM].self, from: modifiedDataInUTF8Format)
                 let sortedOfficesData = offices.sorted(by: {
                     $0.zipCodeOfOffice! < $1.zipCodeOfOffice!
                 })

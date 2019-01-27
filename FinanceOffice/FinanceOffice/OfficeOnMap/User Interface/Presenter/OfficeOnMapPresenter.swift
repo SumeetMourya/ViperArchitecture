@@ -27,7 +27,7 @@ class OfficeOnMapPresenter: OfficeOnMapPresenterProtocol, OfficeOnMapInteractorO
     }
     
     // MARK: OfficeOnMapInteractorOutputProtocol Methods
-    func updateDataOnView(data: OfficeOnMapItem) {
+    func updateDataOnView(data: OfficeOnMapItemDM) {
         self.view?.updateOfficeLocationDataOnView(data: data)
     }
     

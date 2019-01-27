@@ -15,14 +15,14 @@ class OfficeDetailLocalDataManager: OfficeDetailLocalDataManagerInputProtocol {
     
     // MARK: OfficeDetailLocalDataManagerInputProtocol Methods
     
-    func getOfficeDataFromLocalForGiven(idOfOffice: String) -> ListOfOfficesItem? {
+    func getOfficeDataFromLocalForGiven(idOfOffice: String) -> OfficeDetailItemDM? {
         
         guard let context = CoreDataManager.sharedDatabaseManager.managedObjectContext else {
             return nil
         }
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Office")
-        let predicate = NSPredicate(format: "%K == %@", "\(ListOfOfficesItem.CodingKeys.DisId.getKeyOfData())", "\(idOfOffice)")
+        let predicate = NSPredicate(format: "%K == %@", "\(OfficeDetailItemDM.CodingKeys.DisId.getKeyOfData())", "\(idOfOffice)")
         request.predicate = predicate
         
         request.returnsObjectsAsFaults = false
@@ -30,7 +30,7 @@ class OfficeDetailLocalDataManager: OfficeDetailLocalDataManagerInputProtocol {
         do {
             let result = try context.fetch(request)
             
-            if result.count > 0, let dataOfManageOBJGet = result[0] as? NSManagedObject, let office = try? ListOfOfficesItem(from: dataOfManageOBJGet) {
+            if result.count > 0, let dataOfManageOBJGet = result[0] as? NSManagedObject, let office = try? OfficeDetailItemDM(from: dataOfManageOBJGet) {
                 return office
             }
             

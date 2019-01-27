@@ -15,7 +15,7 @@ class ListOfOfficesViewController: UIViewController, ListOfOfficesViewProtocol {
     
     
     var presenter: ListOfOfficesPresenterProtocol?
-    var listOfOffice: [ListOfOfficesItem] = [ListOfOfficesItem]()
+    var listOfOffice: [ListOfOfficesItemDM] = [ListOfOfficesItemDM]()
     
     @IBOutlet var tblvOfficeList: UITableView!
     @IBOutlet var statusText: UILabel!
@@ -40,16 +40,20 @@ class ListOfOfficesViewController: UIViewController, ListOfOfficesViewProtocol {
     // MARK: Private Methods
     
     func showAlertView(msg: String, title: String) {
-        let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         
-        alertController.addAction(UIAlertAction(title: "ok", style: .default, handler: { (action:UIAlertAction) in
-        }))
-        present(alertController, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "ok", style: .default, handler: { (action:UIAlertAction) in
+            }))
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     
     // MARK: ListOfOfficesViewProtocol methods
-    func updateListOfOffices(data: [ListOfOfficesItem]) {
+    func updateListOfOffices(data: [ListOfOfficesItemDM]) {
         
         DispatchQueue.main.async() {
             

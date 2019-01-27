@@ -41,7 +41,7 @@ class ListOfOfficesPresenter: ListOfOfficesPresenterProtocol, ListOfOfficesInter
         self.view?.hideActivityIndicatorWithError(title: title, subtitle: subtitle)
     }
     
-    func updateListOfOffices(data: [ListOfOfficesItem]) {
+    func updateListOfOffices(data: [ListOfOfficesItemDM]) {
         self.view?.updateListOfOffices(data: data)
     }
     

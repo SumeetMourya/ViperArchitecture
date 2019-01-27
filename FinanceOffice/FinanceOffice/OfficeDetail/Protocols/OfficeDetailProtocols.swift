@@ -14,7 +14,7 @@ protocol OfficeDetailViewProtocol: class {
     var presenter: OfficeDetailPresenterProtocol? { get set }
     
     //here we are adding for communication PRESENTER -> VIEW
-    func updateDataOnView(data: ListOfOfficesItem)
+    func updateDataOnView(data: OfficeDetailItemDM)
     func showEmptyDataState()
     
 }
@@ -42,7 +42,7 @@ protocol OfficeDetailPresenterProtocol: class {
 protocol OfficeDetailInteractorOutputProtocol: class {
     
     //here we are adding methods for communication INTERACTOR -> PRESENTER
-    func updateDataOnView(data: ListOfOfficesItem)
+    func updateDataOnView(data: OfficeDetailItemDM)
     func showEmptyDataState()
     
 }
@@ -74,6 +74,6 @@ protocol OfficeDetailLocalDataManagerInputProtocol: class
 {
     
     //here we are adding methods for communication INTERACTOR -> LOCALDATAMANAGER
-    func getOfficeDataFromLocalForGiven(idOfOffice: String) -> ListOfOfficesItem?
+    func getOfficeDataFromLocalForGiven(idOfOffice: String) -> OfficeDetailItemDM?
     
 }

@@ -14,7 +14,7 @@ protocol ListOfOfficesViewProtocol: LoaderView {
     var presenter: ListOfOfficesPresenterProtocol? { get set }
     
     //here we are adding methods for communication PRESENTER -> VIEW
-    func updateListOfOffices(data: [ListOfOfficesItem])
+    func updateListOfOffices(data: [ListOfOfficesItemDM])
     func errorInLoadingDataWith(error: Error?, errorCode: ApiStatusType)
     
 }
@@ -47,7 +47,7 @@ protocol ListOfOfficesInteractorOutputProtocol: class {
     func hideActivityIndicator()
     func hideActivityIndicatorWithError(title: String?, subtitle: String?)
     
-    func updateListOfOffices(data: [ListOfOfficesItem])
+    func updateListOfOffices(data: [ListOfOfficesItemDM])
     func errorInLoadingDataWith(error: Error?, errorCode: ApiStatusType)
     
 }
@@ -71,7 +71,7 @@ protocol ListOfOfficesDataManagerInputProtocol: class
 protocol ListOfOfficesAPIDataManagerInputProtocol: class
 {
     //here we are adding methods for communication INTERACTOR -> APIDATAMANAGER
-    func loadDataForURL(url: String, onSuccess success: @escaping (_ data: [ListOfOfficesItem], _ apiStatusCode: ApiStatusType) -> Void, onFailure failure: @escaping (_ error: Error?, _ apiStatusCode: ApiStatusType) -> Void)
+    func loadDataForURL(url: String, onSuccess success: @escaping (_ data: [DetailOfOfficeDM], _ apiStatusCode: ApiStatusType) -> Void, onFailure failure: @escaping (_ error: Error?, _ apiStatusCode: ApiStatusType) -> Void)
     
     
 }
@@ -79,8 +79,9 @@ protocol ListOfOfficesAPIDataManagerInputProtocol: class
 protocol ListOfOfficesLocalDataManagerInputProtocol: class
 {
     //here we are adding methods for communication INTERACTOR -> LOCALDATAMANAGER
-    func saveData(officesData: [ListOfOfficesItem])
-    func getOfficeDataFromLocal() -> [ListOfOfficesItem]
+//    func saveData(officesData: [ListOfOfficesItemDM])
+    func saveData(officesData: [DetailOfOfficeDM])
+    func getOfficeDataFromLocal() -> [ListOfOfficesItemDM]
     
 }
 

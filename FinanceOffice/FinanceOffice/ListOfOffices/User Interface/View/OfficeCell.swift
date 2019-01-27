@@ -24,7 +24,7 @@ class OfficeCell: UITableViewCell {
         
     }
     
-    func bindDataToUI(data: ListOfOfficesItem) {
+    func bindDataToUI(data: ListOfOfficesItemDM) {
         nameOfOffice.text = data.nameOfOffice
         var valueOfAddress: String = ""
         
